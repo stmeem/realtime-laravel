@@ -43853,7 +43853,7 @@ module.exports = function(module) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
-Echo.channel('notification').listen('UserSessionChanged', function (e) {
+Echo["private"]('notification').listen('UserSessionChanged', function (e) {
   var notificationElement = document.getElementById('notification');
   notificationElement.innerText = e.message;
   notificationElement.classList.remove('invisible');
