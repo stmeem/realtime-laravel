@@ -43853,6 +43853,14 @@ module.exports = function(module) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+Echo.channel('notification').listen('UserSessionChanged', function (e) {
+  var notificationElement = document.getElementById('notification');
+  notificationElement.innerText = e.message;
+  notificationElement.classList.remove('invisible');
+  notificationElement.classList.remove('alert-success');
+  notificationElement.classList.remove('alert-danger');
+  notificationElement.classList.add('alert-' + e.type);
+});
 
 /***/ }),
 
@@ -43924,8 +43932,8 @@ window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/inflexionpoint/Desktop/RealtimeLaravel/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/inflexionpoint/Desktop/RealtimeLaravel/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Projects\realtime-laravel\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Projects\realtime-laravel\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
